@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.3.2, pluggy-1.6.0 -- C:\Users\Manas\Downloads\Total Job Application process flow\projects\survey-calibrated-quality-index\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Manas\Downloads\Total Job Application process flow\projects\survey-calibrated-quality-index
+configfile: pyproject.toml
+collecting ... collected 14 items
+
+tests/test_impressions.py::test_panel_is_fully_crossed_and_balanced PASSED [  7%]
+tests/test_impressions.py::test_item_effect_is_shared_between_usefulness_and_engagement PASSED [ 14%]
+tests/test_impressions.py::test_respondent_effect_does_not_leak_into_engagement PASSED [ 21%]
+tests/test_quality_index.py::test_shrinkage_is_identical_across_items_in_a_balanced_design PASSED [ 28%]
+tests/test_quality_index.py::test_quality_index_never_reorders_relative_to_raw_item_mean PASSED [ 35%]
+tests/test_quality_index.py::test_pairwise_reorder_rate_is_zero_against_itself PASSED [ 42%]
+tests/test_quality_index.py::test_pairwise_reorder_rate_hand_computed_example PASSED [ 50%]
+tests/test_quality_index.py::test_identical_rankings_reorder_rate_zero_even_with_different_scale PASSED [ 57%]
+tests/test_quality_index.py::test_fully_reversed_ranking_reorder_rate_is_one PASSED [ 64%]
+tests/test_variance_decomp.py::test_anova_oracle_recovers_known_variances_on_a_large_toy_panel PASSED [ 71%]
+tests/test_variance_decomp.py::test_anova_requires_balanced_design PASSED [ 78%]
+tests/test_variance_decomp.py::test_variances_are_never_negative PASSED  [ 85%]
+tests/test_variance_decomp.py::test_mixedlm_matches_anova_oracle_on_a_small_toy_panel PASSED [ 92%]
+tests/test_variance_decomp.py::test_pct_at_respondent_sums_consistently PASSED [100%]
+
+============================= 14 passed in 1.32s ==============================

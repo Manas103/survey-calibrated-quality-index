@@ -1,0 +1,51 @@
+n_respondents=200, n_items=300, n_impressions=60000
+Spearman(usefulness_rating, engagement_score) across all impressions: 0.3170 (p=0.00e+00)
+
+SUMMARY (resume claim vs measured):
+{
+  "n_impressions": 60000,
+  "claim_spearman_target": 0.31,
+  "measured_spearman": 0.31699428832805404,
+  "p_value": 0.0
+}
+====================================================================
+n_impressions=60000
+
+ANOVA (closed-form, reference oracle) [0.00s]:
+  var_respondent=1.2011  var_item=0.9578  var_residual=1.0014
+  pct_at_respondent=38.01%
+
+Fitting MixedLM (REML, crossed random effects)... this takes a few minutes.
+MixedLM [159.36s]:
+  var_respondent=1.1970  var_item=0.9382  var_residual=1.0210
+  pct_at_respondent=37.92%
+
+SUMMARY (resume claim vs measured):
+{
+  "claim_pct_at_respondent_target": 0.38,
+  "measured_pct_at_respondent_anova": 0.3800616958164662,
+  "measured_pct_at_respondent_mixedlm": 0.3792480592576446,
+  "var_respondent_anova": 1.2011135832024673,
+  "var_item_anova": 0.9578378366985197,
+  "var_residual_anova": 1.0013606989569246,
+  "var_respondent_mixedlm": 1.1969744077973856,
+  "var_item_mixedlm": 0.9381981091883933,
+  "var_residual_mixedlm": 1.0210055532208067
+}
+====================================================================
+Variance components (ANOVA): var_respondent=1.2011  var_item=0.9578  var_residual=1.0014
+Shrinkage factor applied to every item's deviation from the grand mean: 0.9948
+
+300 items, 44850 pairwise comparisons
+PAIRWISE REORDER RATE (survey-calibrated index vs engagement-only ranking): 26.94%
+Sanity check, reorder rate vs the UNSHRUNK raw item mean (must be exactly 0): 0.0000%
+
+SUMMARY (resume claim vs measured):
+{
+  "n_items": 300,
+  "n_pairs": 44850,
+  "claim_reorder_target": 0.27,
+  "measured_reorder_rate": 0.2694314381270903,
+  "shrinkage_factor": 0.9947999881956248,
+  "sanity_reorder_vs_raw_mean": 0.0
+}
